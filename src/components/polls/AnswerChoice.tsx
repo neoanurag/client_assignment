@@ -9,11 +9,12 @@ type Option = {
 
 interface AnswerChoiceProps {
   options: Option[];
+  questionType: string;
   onSelect: (optionId: number) => void;
   selectedOptionId?: number;
 }
 
-const AnswerChoice: React.FC<AnswerChoiceProps> = ({ options, onSelect, selectedOptionId }) => {
+const AnswerChoice: React.FC<AnswerChoiceProps> = ({ options, questionType, onSelect, selectedOptionId }) => {
   return (
     <View style={styles.optionsContainer}>
       {options.map((option) => {

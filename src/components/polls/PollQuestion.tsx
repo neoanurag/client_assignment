@@ -40,6 +40,7 @@ const PollQuestion: React.FC<PollQuestionProps> = ({
       <AnswerChoice
         options={options}
         onSelect={handleSelectOption}
+        questionType={questionType}
         selectedOptionId={selectedOptionId || undefined}
       />
     </View>

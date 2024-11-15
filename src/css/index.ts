@@ -66,6 +66,7 @@ const globalStyles = StyleSheet.create({
     marginVertical: 10,
     borderRadius: BorderRadius.medium,
     backgroundColor: Colors.primary,
+    alignSelf: 'center',
   },
   btnTitle: {
     fontSize: FontSizes.medium,

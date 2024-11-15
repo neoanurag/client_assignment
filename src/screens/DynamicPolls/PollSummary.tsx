@@ -28,16 +28,20 @@ const PollSummary: React.FC = () => {
     };
 
     const getAnswerText = (pollId: number, questionId: number, answerId: number) => {
+        console.log('getAnswerText', pollId, questionId, answerId);
+
         const poll = PollDataMock.find(p => p.id === pollId);
-        if (!poll) {return 'Poll not found';}
+
+        if (!poll) {return 'Poll';}
 
         const question = poll.questions.find(q => q.id === questionId);
         if (!question) {return 'Question not found';}
 
+
         const answer = question.options.find(option => option.id === answerId);
         if (!answer) {return 'Answer not found';}
 
-        return answer.text;
+        return answer.label;
     };
 
     const calculatePercentage = (questionVotes: Record<number, number>, answerId: number) => {
@@ -134,6 +138,9 @@ const styles = StyleSheet.create({
     },
     pollContainer: {
         marginBottom: Spacing.medium,
+        borderBottomWidth: 5,
+        borderBottomColor: Colors.border,
+        paddingBottom: Spacing.medium,
     },
     pollTitle: {
         fontSize: FontSizes.large,

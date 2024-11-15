@@ -8,7 +8,7 @@ const Form = () => {
     const navigation = useNavigation();
 
     const handleSubmitSuccess = () => {
-        navigation.goBack();
+        navigation.navigate('FormList');
     };
 
     return (

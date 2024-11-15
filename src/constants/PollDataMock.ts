@@ -98,7 +98,7 @@ export const PollDataMock = [
           { 'id': 2, 'label': 'Russia' },
           { 'id': 3, 'label': 'China' },
           { 'id': 4, 'label': 'Israel' },
-          { 'id': 4, 'label': 'Iran' },
+          { 'id': 5, 'label': 'Iran' },
         ],
       },
       {
